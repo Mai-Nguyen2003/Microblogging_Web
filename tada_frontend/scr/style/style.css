@@ -1,0 +1,237 @@
+body {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.navbar a.current {
+    font-weight: bold;
+}
+
+.navbar a {
+    color: #257279;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+button {
+    background-color: #22a58b;
+    color: white;
+    margin-top: 18px;
+    margin-bottom: var(--pico-spacing);
+}
+
+button.delete {
+    background-color: #fdf5e2;
+    border-color: #fae00b;
+    color: #00555d;
+}
+
+#logo {
+    color: #22a58b;
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 55px;
+    margin-bottom: 0px;
+}
+
+header {
+    background-color: #eceeee;
+    display: flex;
+    justify-content: space-between;
+}
+
+#welcome_page {
+    background-color: #bfe9f7;
+    text-align: center;
+    font-family: "Lucida Console", Courier, monospace;
+    font-size: 25px;
+    line-height: 3;
+    min-height: 100vh;
+}
+
+#logout_page {
+    background-color: #fdf5e2;
+    text-align: center;
+    font-family: "Lucida Console", Courier, monospace;
+    font-size: 25px;
+    line-height: 3;
+    min-height: 100vh;
+}
+
+img {
+    height: auto;
+    width: 300px
+}
+
+#welcome_page > h2 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+label {
+    font-family: cursive;
+    font-weight: bold;
+    color: #257279;
+}
+
+.post_item {
+    margin-top: 15px;
+    border-bottom-width: 6px;
+    border-bottom-style: dashed;
+    border-bottom-color: #b5bbc0;
+    padding-bottom: 10px;
+}
+
+.info {
+    text-align: right;
+    font-family: "Fira Code";
+}
+
+.post_text {
+    font-size: 25px;
+    font-family: Arial;
+    text-align: justify;
+}
+
+button.emoji {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.btn-modal {
+    padding: 10px 20px;
+    display: block;
+    margin: 100px auto 0;
+    font-size: 18px;
+}
+
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49, 49, 49, 0.8);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    padding: 14px 28px;
+    border-radius: 3px;
+    width: 85%;
+    height: 70%;
+    overflow: scroll;
+}
+
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+    margin-top: 0px;
+}
+
+#following{
+    background-color: #034841;
+}
+
+.user_infos{
+    font-style: italic;
+    font-size: small;
+}
+
+label.icons {
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media only screen and (max-width: 500px) {
+    header{
+        display: list-item;
+    }
+
+    .navbar{
+        justify-content: flex-end;
+    }
+
+    label.icons {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10%;
+        font-size: 40px;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .navbar ul  {
+        display:none;
+
+    }
+    .navbar ul a {
+        margin: 3px;
+    }
+
+    #check:checked~.navbar ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+    .icons #close-icon{
+        display: none;
+    }
+    #check:checked~.icons #close-icon{
+        display: block;
+    }
+
+    .post_text {
+        font-size: 18px;
+        font-family: Arial;
+    }
+    .post_item button.emoji,.follow_buttons button{
+        width: fit-content;
+        border-radius: 12px;
+        margin-right: 10px;
+
+    }
+    .post_item .grid, .follow_buttons div.grid{
+        display: block;
+    }
+    #following, .delete{
+        width: fit-content;
+    }
+    .found_user{
+        border-bottom: 2px dotted darkolivegreen;
+    }
+
+    .found_user .user_profile{
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+
+
+
+}
+
+
